@@ -1,15 +1,13 @@
-# random-selector
-list1 = []
-while True:
-    str1 = input("Enter email or exit to stop, print to show data: ")
-    if str1 == "exit":
-        break
-    elif str1 == "print":
-        for i in list1:
-            print("username:",i[0],"and domain:",i[1].upper())
-        break
-    elif "@" in str1:
-        l1 = list(str1.split("@"))
-        list1.append(l1)
-    else:
-        print("Input is not valid")
+import random
+sentence_starter = ['About 100 years ago ','in the 20BC ','once upon a time ']
+character=['There lived a king. ','there was a man named jack. ',
+ 'there lived a farmer .']
+time=['One day ','One full moon night ']
+story_plot=['he was passing by ','he was going for a picnic to '] 
+place = ['the mountains ','the garden ']
+second_character = ['he saw a man ','he saw a young lady ']
+age = ['who seemed to be in late 20s ','who seemed to be very old and feeble ']
+work = ['digging something.','digging a well on roadside.']
+print(random.choice(sentence_starter)+random.choice(character)+
+ random.choice(time)+random.choice(story_plot)+random.choice(place)
+ +random.choice(second_character)+random.choice(age)+random.choice(work))
